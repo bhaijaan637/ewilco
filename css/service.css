@@ -1,0 +1,643 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo&family=Inter:wght@600&display=swap');
+*{
+  font-family: 'Heebo' ,sans-serif;
+}
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Heebo' , sans-serif;
+    overflow-x: hidden;
+}
+h1,h2,h3,h4,h5,h6{
+  font-family:' Inter ', sans-serif;
+}
+header {
+  padding: 30px 0 0;
+}
+header a{
+  text-decoration: none;
+}
+header img{
+  width: 45%;
+  height: auto;
+}
+header .icon-box{
+  text-align: center;
+  color: #0B1B69;
+  vertical-align: center; 
+  display: flex;
+  align-items: center;
+}
+header .icon-box{
+  min-width:  220px;
+  height: auto;
+  padding-right: 25px;
+}
+header .icon-box span{
+  font-size: 16px;
+  line-height: 24px;
+}
+header .icon-box h6{
+  text-align: left;
+  line-height: 21px;
+  font-weight: 500;
+  font-size: 1rem;
+  color:  var(--blue);
+}
+header .icon-box .icon i {
+ background: var(--yellow);
+ line-height: 50px;
+ color: var(--blue);
+ font-size: 22px;
+ border-radius: 50%;
+ width: 50px;
+ height: 50px;
+ margin-left: auto;
+ margin-right: 10px;
+ text-align: center;
+ vertical-align: center;
+}
+header  hr {
+    margin: 1.5rem 0 1rem;
+  }
+section{
+  padding-top: 80px;
+}
+:root{
+  --red:var(--blue);
+  --yellow:#FFD000;
+  --black:#424955;
+  --blue:#273272;
+  --text:#6c7084;
+}
+
+/*Navigation*/
+.btn-dark {
+  background: transparent;
+  color: var(--yellow);
+  border: none;
+   margin-left: 10px;
+}
+.btn-dark:hover{
+    background: var(--yellow);
+}
+.offcanvas-active{
+  overflow:hidden;
+}
+.offcanvas-header{ 
+  display:none;
+   }
+   .logo-img{
+    display: none;
+   }
+   .logo-btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+   }
+
+.screen-darken{
+  height: 100%;
+  width:0%;
+  z-index: 30;
+  position: fixed;
+  top: 0;
+  right: 0;
+  opacity:0;
+  visibility:hidden;
+  background-color: rgba(34, 34, 34, 0.6);
+  transition:opacity .2s linear, visibility 0.2s, width 2s ease-in;
+}
+
+.screen-darken.active{
+  z-index:10; 
+  transition:opacity .3s ease, width 0s;
+    opacity:1;
+    width:100%;
+    visibility:visible;
+}
+
+.navbar{
+  background-color: #FFF;
+  /*box-shadow: 0px 0px 10px rgba(0,0,0,.7);*/
+}
+
+.navbar>.container-fluid{
+  justify-content: space-between;
+  padding-left: 8%;
+  padding-right: 8.5%;
+}
+.navbar .navbar-nav .nav-item .nav-link{
+  margin-left: 32px;
+  text-transform: capitalize;
+  font-size: 0.9rem;
+  /*line-height: 12px;*/
+  padding: 10px;
+  padding-right: 20px;
+  color: var(--blue);
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  transition: 0.4s ease-in-out;
+}
+.navbar .navbar-nav .nav-item .nav-link:hover{
+  color: var(--yellow);
+} 
+
+.navbar .navbar-nav .dropdown-menu .dropdown-item:hover{
+    color: var(--yellow);
+    background: transparent;
+}
+.nav-link.active{
+  color: var(--yellow);
+} 
+.navbar .btn{
+background: var(--blue);
+color: #FFF;
+border-radius: 50px;
+padding-left: 20px;
+padding-right: 20px;
+}
+.btn-dark+.btn{
+background: var(--blue);
+color: #FFF;
+border-radius: 50px;
+padding-left: 20px;
+padding-right: 20px;
+margin-right: 20px;
+float: right;
+border: none;
+display: none;
+}
+/*Navigation End*/
+/*First-section Start*/
+.first-section{
+  margin-top: 1rem;
+background:linear-gradient(rgba(11, 27, 105,0.7),rgba(11, 27, 105,0.7)), url("https://templatekit.jegtheme.com/electriza/wp-content/uploads/sites/112/2021/06/low-angle-view-of-electrician-in-gloves-fixing-electrical-distribution-box.jpg");
+    background-position: 0% 38%;
+    background-repeat: no-repeat;
+    background-size: cover;
+padding: 140px 0px 140px 0px;
+    
+}
+.first-section .breadcrumb ul{
+  padding: 10px 16px;
+  list-style: none;
+  margin: 0 auto;
+}
+.breadcrumb ul li {
+  display: inline;
+  font-size: 18px;
+  color: #fff;
+}
+.breadcrumb ul li+li:before {
+  padding: 8px;
+  color: #FFD02D;
+  content: ">\00a0";
+}
+.breadcrumb ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+.breadcrumb ul li a:hover {
+  color: #FFD02D;
+  text-decoration: underline;
+}
+
+/*First-section End*/
+/* fancy-Lines-section start*/
+.fancy {
+  line-height: 0.5;
+  text-align: left;
+}
+.fancy span {
+  display: inline-block;
+  position: relative;  
+  font-size: 18px;
+  font-weight: 550;
+}
+.fancy span:before{
+  content: "";
+  position: absolute;
+  height: 6px;
+  border-bottom: 2px solid #FF9915;
+  top: 0;
+  width: 50px;
+}
+.fancy span:before {
+  right: 100%;
+  margin-right: 15px;
+}
+/* fancy-Lines-section end*/
+/*Services-section End*/
+.services-section .profile-box{
+  background: #EEEEEE;
+  padding: 30px;
+}
+.services-section .profile-box a{
+  background: #FFF;
+  padding: 10px;
+  max-width: 150px;
+  text-decoration: none;
+  color: var(--text);
+}
+.services-section .card{
+  border: none;
+}
+.services-section .card-body .card-title{
+  font-weight: 550;
+  color: var(--blue);
+}
+.services-section .card-body .card-title:after{
+  content: '';
+  display: block;
+  background: var(--blue);
+  height: 3px;
+  width: 50px;
+  margin: 5px 0 -18px;
+}
+.services-section .card-body ul{
+  list-style: none;
+  padding: 0;
+  transition: 0.3s all;
+}
+.services-section .card-body ul li:before{
+content: '\f0eb';
+    font-family: "FontAwesome";
+    color: var(--blue);
+ margin-right: 10px;   
+  transition: 0.3s all;
+}
+.services-section .card-body ul li:hover:before{
+  color: var(--yellow);
+}
+/*--------------contact-form------------------*/
+.form-area{
+  /*margin-top: 1.5rem;*/
+}
+.form-area .info{
+  background-image: linear-gradient(rgba(3, 11, 60,0.7),rgba(3, 11, 60,0.9)), url("../images/form-bg.jpg");
+  background-size: cover;
+background-position: 50% 30%;
+background-repeat: no-repeat;
+color: #fff;
+padding: 50px;
+}
+.form-area form .btn{
+border-radius:50px;
+    padding: 10px 15px ;
+    box-shadow: 0px 0px 0px 0px rgb(66 133 244 / 30%);
+}
+.form-area form .btn:hover{
+  color: #fff;
+}
+/*--------------contact-formEnd------------------*/
+
+
+
+/*Services-section End*/
+/*Clints-section*/
+.serve-section{
+  margin-top: 80px;
+ padding: 100px 0;
+  background:linear-gradient(rgba(3, 11, 60,0.9),rgba(3, 11, 60,0.9)), url("../images/electrical-diagrams-multimeter-for-measurement-in-electrical-installation.jpg");
+background-size: cover;
+ background-position: 0px 30%;
+    background-repeat: no-repeat; 
+}
+.serve-section h1{
+  color: #FFF;
+  font-weight: 600;
+}
+.serve-section .icon {
+     display: inline-block;
+     padding: 0px 20px;
+     margin-top: 1rem;
+   }
+
+.serve-section .icon i {
+     background: var(--yellow);
+     color: #0B1B69;
+     font-size: 2.6rem;
+     border-radius: 50%;
+     width: 80px;
+     height: 80px;
+     line-height: 80px;
+     margin-left: 8px;
+     text-align: center;
+     vertical-align: center;
+}
+.serve-section .box h6{
+  margin-top: 0.7rem;
+color: #FFF;
+margin-bottom: 0;
+}
+.serve-section .box{
+  cursor: pointer;
+  transition: 0.4s all;
+}
+.serve-section .box:hover{
+  transform: scale(1.08);
+}
+/*Clints-section End*/
+/*-- -Our Process-section Start--*/
+.process-section{
+  margin-bottom: 90px;
+}
+.process-section h2::after{
+content: "";
+display: block;
+width: 150px;
+height: 4px;
+background: var(--blue);
+margin: 6px 3px -10px;
+}
+.process-section h2{
+  font-weight: 500;
+  color: var(--blue);
+  font-family: 'Inter',sans-serif;
+}
+.content-box{
+ padding: 50px 70px;
+ /*background: rgba(3, 11, 60,0.2);*/
+ background:#F2F2FF ;
+ position: relative;
+ min-height: 360px;
+}
+.content-box h5{
+  font-weight: 530;
+  color: var(--blue);
+}
+.content-box .item-content ul{
+  list-style: none;
+  padding: 0;
+  color: var(--text);
+}
+.content-box .item-content ul li{
+      padding: 10px 0 ;
+      font-size: 14px;
+}
+.content-box .item-content ul li:before{
+content: '\f046';
+    font-family: "FontAwesome";
+    color: var(--blue);
+ margin-right: 10px;   
+}
+.content-box .steps{
+  position: absolute;
+  bottom: -15px;left: 36%;
+  background: var(--blue);
+  padding: 10px;
+  color: #FFF;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+/* -Our Process-section Start End*/
+/*Whatsapp-btn*/
+.whatsapp-btn a{
+  position:fixed;
+  width:50px;
+  height:50px;
+  line-height: 54px;
+  bottom:40px;
+  left:40px;
+  background-color:#25d366;
+  color:#FFF;
+  border-radius:50px;
+  text-align:center;
+  font-size:28px;
+  z-index:100;
+  text-decoration: none;
+}
+
+/*Whatsapp-btn*/
+/* footer-section start*/
+footer{
+background:linear-gradient(rgba(3, 11, 60,0.9),rgba(3, 11, 60,0.9)), url("../images/electrical-diagrams-multimeter-for-measurement-in-electrical-installation.jpg");
+background-size: cover;
+ background-position: 0px 30%;
+    background-repeat: no-repeat;
+}
+footer a{
+  text-decoration: none;
+}
+footer img{
+  width: 52%;
+}
+footer p{
+padding-top: 1rem;
+  color: #FFF;
+  font-size: 14px;
+}
+footer .icons {
+     display: inline-block;
+     padding: 0px 20px;
+   }
+   
+  footer .icons i {
+     background: var(--yellow);
+    line-height: 40px;
+     color: var(--blue);
+     font-size: 22px;
+     border-radius: 50%;
+     width: 40px;
+     height: 40px;
+     margin-left: 8px;
+     text-align: center;
+     vertical-align: center;
+     transition: all 0.4s ease;
+   }
+   footer .icons i:hover{
+    background: #FFF;
+    color: var(--yellow);
+   }
+   footer  h5:after{
+  background-color: var(--yellow);
+  content: "";
+  display: block;
+  width: 100px;
+  height: 2px;
+  margin: 20px 0 10px;
+}
+footer .quick-link ul ,footer .useful-links ul{
+  padding: 0;
+}
+footer .quick-link ul li ,footer .useful-links ul li{
+  list-style: none;
+  padding-top: 6px;
+}
+footer .quick-link ul li a ,footer .useful-links ul li a{
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+   footer  h4{
+    font-size: 1.4rem;
+   }
+footer .newsletter p{
+  padding: 0;
+  color: #FFF;
+  font-size: 14px;
+}
+footer .newsletter .btn{
+  color: var(--blue);
+  background: var(--yellow);
+  border: none;
+  border-radius: 0;
+  margin-right: 10px;
+  box-shadow: none;
+}
+/*contact-section*/
+footer h6{
+  font-size: 1.2rem;
+}
+footer span{
+  font-size: 1rem;
+}
+footer .call-btn{
+  margin-top: 30px;
+  padding: 20px;
+  background:var(--blue);
+  text-align: center;
+  color: #FFF;
+  vertical-align: middle; 
+}
+footer .call-btn .icons i {
+     background: var(--yellow);
+     color: var(--blue);
+     font-size: 22px;
+     border-radius: 50%;
+     width: 40px;
+     height: 40px;
+     margin-left: 8px;
+     text-align: center;
+     vertical-align: center;
+   }
+footer .support-btn{
+  margin-top: 30px;
+  padding: 20px;
+  background:var(--yellow);
+  text-align: center;
+  color: var(--blue);
+  vertical-align: middle; 
+}
+footer .support-btn .icons i {
+     background: var(--blue);
+     color: #FFF;
+     font-size: 22px;
+     border-radius: 50%;
+     width: 40px;
+     height: 40px;
+     margin-left: 8px;
+     text-align: center;
+     vertical-align: center;
+   }
+  footer .copyright p{
+   padding: 10px 0;
+   margin: 0;
+}
+  footer .copyright  a{
+    text-decoration: none;
+color: #FFF;
+  }
+  footer .copyright{
+   border-top: 2px solid #eee;
+}
+
+   /*footer-section End*/
+
+   /*media query  */
+ @media(max-width: 1200px){
+  
+  .six-section .col-md-4{
+    margin-top: 10px;
+  }
+  .fifth-section .card{
+    padding: 2rem;
+    text-align: center;
+  }
+  footer .icons{
+    padding: 10px;
+  }
+
+}
+
+ @media(max-width: 992px){
+  header .icon-box{
+    display: none;
+  }
+  .nav{
+    display: none;
+  }
+  header .icon-box{
+    display: none;
+  }
+   .btn-dark+.btn{
+  display: initial;
+ }
+  .navbar .navbar-nav .nav-item .nav-link {
+    margin-left: 0.25rem!important;
+  }
+#menubar{
+  background: #9B0000;
+  color: #000;
+  margin-bottom: 1rem;
+}
+#menubar .menu-btn-1{
+  display: initial;
+ }
+ .inform-section .info {
+  display: none;
+ }
+
+  .seven-section .card-box .text ul{
+    padding: 0;
+  }
+  .seven-section .card-box .card{
+    vertical-align: center;
+  }
+  .seven-section .card-box{
+    padding: 14px;
+  }
+}
+ @media(max-width: 768px){
+  .seven-section .btn{
+    width: 150px; 
+
+  }
+  
+}
+
+
+
+   /* ============ mobile view ============ */
+@media all and (max-width: 991px) {
+  
+  
+  .offcanvas-header{ display:block; }
+
+  .mobile-offcanvas{
+    visibility: hidden;
+    transform:translateX(-100%);
+      border-radius:0; 
+    display:block;
+      position: fixed;
+      top: 0; left:0;
+      height: 100%;
+      z-index: 1200;
+      width:80%;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      transition: visibility .3s ease-in-out, transform .3s ease-in-out;
+  }
+
+  .mobile-offcanvas.show{
+    visibility: visible;
+      transform: translateX(0);
+  }
+  .mobile-offcanvas .container, .mobile-offcanvas .container-fluid{
+    display: block;
+  }
+}

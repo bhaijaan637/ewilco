@@ -1,0 +1,832 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo&family=Inter:wght@600&display=swap');
+*{
+  font-family: 'Heebo' ,sans-serif;
+}
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Heebo' , sans-serif;
+    overflow-x: hidden;
+}
+h1,h2,h3,h4,h5,h6{
+  font-family:' Inter ', sans-serif;
+}
+header {
+  padding: 30px 0 0;
+}
+header a{
+  text-decoration: none;
+}
+header img{
+  width: 45%;
+  height: auto;
+}
+header .icon-box{
+  text-align: center;
+  color: #0B1B69;
+  vertical-align: center; 
+  display: flex;
+  align-items: center;
+}
+header .icon-box{
+  min-width:  220px;
+  height: auto;
+  padding-right: 25px;
+}
+header .icon-box span{
+  font-size: 16px;
+  line-height: 24px;
+}
+header .icon-box h6{
+  text-align: left;
+  line-height: 21px;
+  font-weight: 500;
+  font-size: 1rem;
+  color:  var(--blue);
+}
+header .icon-box .icon i {
+ background: var(--yellow);
+ line-height: 50px;
+ color: var(--blue);
+ font-size: 22px;
+ border-radius: 50%;
+ width: 50px;
+ height: 50px;
+ margin-left: auto;
+ margin-right: 10px;
+ text-align: center;
+ vertical-align: center;
+}
+section{
+  padding-top: 80px;
+}
+:root{
+  --red:var(--blue);
+  --yellow:#FFD000;
+  --black:#424955;
+  --blue:#273272;
+  --text:#6c7084;
+}
+
+/*Navigation*/
+.btn-dark {
+  background: transparent;
+  color: var(--yellow);
+  border: none;
+   margin-left: 10px;
+}
+.btn-dark:hover{
+    background: var(--yellow);
+}
+.offcanvas-active{
+  overflow:hidden;
+}
+.offcanvas-header{ 
+  display:none;
+   }
+   .logo-img{
+    display: none;
+   }
+   .logo-btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+   }
+
+.screen-darken{
+  height: 100%;
+  width:0%;
+  z-index: 30;
+  position: fixed;
+  top: 0;
+  right: 0;
+  opacity:0;
+  visibility:hidden;
+  background-color: rgba(34, 34, 34, 0.6);
+  transition:opacity .2s linear, visibility 0.2s, width 2s ease-in;
+}
+
+.screen-darken.active{
+  z-index:10; 
+  transition:opacity .3s ease, width 0s;
+    opacity:1;
+    width:100%;
+    visibility:visible;
+}
+
+.navbar{
+  background-color: #FFF;
+  /*box-shadow: 0px 0px 10px rgba(0,0,0,.7);*/
+}
+
+.navbar>.container-fluid{
+  justify-content: space-between;
+  padding-left: 8%;
+  padding-right: 8.5%;
+}
+.navbar .navbar-nav .nav-item .nav-link{
+  margin-left: 32px;
+  text-transform: capitalize;
+  font-size: 0.9rem;
+  /*line-height: 12px;*/
+  padding: 10px;
+  padding-right: 20px;
+  color: var(--blue);
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  transition: 0.4s ease-in-out;
+}
+.navbar .navbar-nav .nav-item .nav-link:hover{
+  color: var(--yellow);
+} 
+.navbar .navbar-nav .dropdown-menu .dropdown-item:hover{
+    color: var(--yellow);
+    background: transparent;
+}
+.nav-link.active{
+  color: var(--yellow);
+} 
+
+
+.navbar .btn{
+background: var(--blue);
+color: #FFF;
+border-radius: 50px;
+padding-left: 20px;
+padding-right: 20px;
+}
+.btn-dark+.btn{
+background: var(--blue);
+color: #FFF;
+border-radius: 50px;
+padding-left: 20px;
+padding-right: 20px;
+margin-right: 20px;
+float: right;
+border: none;
+display: none;
+}
+/*Navigation End*/
+
+/*First-section Start*/
+.first-section{
+  margin-top: 1rem;
+background:linear-gradient(rgba(39, 50, 114,0.9),rgba(39, 50, 114,0.8)), url("../images/about-banner.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+background-position: 0% 45%;
+    background-repeat: no-repeat;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    padding: 140px 0px;
+}
+.first-section .breadcrumb ul{
+  padding: 10px 16px;
+  list-style: none;
+  margin: 0 auto;
+}
+.breadcrumb ul li {
+  display: inline;
+  font-size: 18px;
+  color: #fff;
+}
+.breadcrumb ul li+li:before {
+  padding: 8px;
+  color: #FFD02D;
+  content: ">\00a0";
+}
+.breadcrumb ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+.breadcrumb ul li a:hover {
+  color: #FFD02D;
+  text-decoration: underline;
+}
+
+/*First-section End*/
+/*Second-section  Start*/
+/*Second-section  Start*/
+.second-section{
+  color: var(--blue);
+}
+.second-section .image-1{
+  position: relative;
+  top: 0; left: 0%;
+  z-index: -1;
+  overflow: hidden;
+    float: left;
+   margin: 0 30px 10px 0;
+    width: 45%;
+}
+
+.second-section .image-2{
+  position: absolute;
+  top: 15%; left: -15%;
+    padding-right: 12%;
+  z-index: 100;
+}
+.second-section .image-2 img{
+  border:1rem solid #fff;
+  width: 80%;
+      max-width: 100%;
+  height: auto;
+}
+.second-section .image-1 > img {
+  padding-left: 100px;
+  width: 125%;
+}
+.second-section .counter-imgbox{
+  position: absolute;
+  bottom:-22px; left: 0;
+  padding: 0;
+}
+.second-section .counter-imgbox h1{
+  color: var(--blue);
+}
+.second-section .counter-imgbox .count-text{
+color: var(--text);
+font-size: 0.8rem;
+font-weight: 600;
+}
+
+/*Welcome-Inner In Second Section*/
+.second-section p{
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--text);
+}
+
+.second-section .fancy {
+  line-height: 0.5;
+  text-align: center;
+}
+.second-section .fancy span {
+  display: inline-block;
+  position: relative;  
+  font-weight: 550;
+  color: var(--blue);
+}
+.second-section .fancy span:before{
+  content: "";
+  position: absolute;
+  height: 6px;
+  border-bottom: 3px solid var(--yellow);
+  top: 0;
+  width: 50px;
+}
+.second-section .fancy span:before {
+  right: 100%;
+  margin-right: 15px;
+}
+.second-section .welcome-inner{
+  padding: 1.5rem 0 0 0;
+}
+.second-section .welcome-inner .content{
+  text-align: justify;
+}
+.second-section .bottom-content{
+  text-align: justify;
+}
+/*Second-section End*/
+/*Vission Mission-section*/
+a:hover, a:focus{
+    outline: none;
+    text-decoration: none;
+}
+.vm-section #accordion .accordion-item{
+    border-radius:0;
+    box-shadow: none;
+}
+.vm-section #accordion .panel-heading{
+    padding: 0;
+    border-radius: 0;
+    background: #fff;
+}
+.vm-section #accordion .accordion-header{
+    overflow: hidden;
+    margin: 0;
+    background: rgba(3, 11, 60,0.9);
+}
+.vm-section #accordion .accordion-header a{
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #FFF;
+    text-transform: uppercase;
+    padding: 17px 20px;
+    position: relative;
+    transform: translateX(0px);
+    transition: all 0.30s linear;
+}
+#accordion .accordion-header a:hover{
+    transform:translateX(60px);
+}
+#accordion .accordion-header a:before,
+.vm-section #accordion .accordion-header a.collapsed:before{
+    content: "\f107";
+    font-family: "FontAwesome";
+    font-weight: 900;
+    width: 50px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -60px;
+    color: #fff;
+    font-size: 20px;
+    line-height: 50px;
+    text-align: center;
+    background: var(--yellow);
+    transition: all 0.30s linear 0s;
+}
+.vm-section #accordion .accordion-header a.collapsed:before{
+    content: "\f105";
+}
+.vm-section #accordion .accordion-body{
+    border-top:0 none;
+    color:var(--text);
+    background: #F2F2FF;
+}
+/*Vission Mission-section End*/
+/*Six-Services-section Start*/
+.third-section{
+background:linear-gradient(rgba(3, 11, 60,0.9),rgba(3, 11, 60,0.9)), url("../images/industrial-machine-PW7XEXK.jpg");
+background-size: cover;
+background-position: center;
+color: #fff;
+margin-top: 60px;
+padding-top: 80px;
+padding-bottom: 40px;
+}
+.third-section h2{
+  font-size: 32px;
+  line-height: 41px;
+  font-weight: 600;
+  color: #FFF;
+}
+.third-section .icon i {
+     background: var(--yellow);
+     padding: 14px;
+     color: var(--blue);
+     font-size: 3rem;
+     border-radius: 50%;
+     width: 80px;
+     height: 80px;
+     margin-left: 8px;
+     text-align: center;
+     vertical-align: center;
+}
+.third-section h4{
+  font-size: 24px;
+  line-height: 31px;
+}
+.third-section p{
+    font-family: Heebo , sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+.third-section .model-img img{
+  width: 100%;
+  height: auto;
+}
+
+/*third-Services-section End*/
+/*-- Four-Our Process-section Start--*/
+.process-section{
+  margin-bottom: 90px;
+}
+.process-section h2::after{
+content: "";
+display: block;
+width: 150px;
+height: 4px;
+background: var(--blue);
+margin: 6px 0 -10px 1px;
+}
+.process-section h2{
+  font-weight: 500;
+  color: var(--blue);
+  font-family: 'Inter',sans-serif;
+}
+.content-box{
+ padding: 50px 70px;
+ /*background: rgba(3, 11, 60,0.2);*/
+ background:#F2F2FF ;
+ position: relative;
+ min-height: 460px;
+}
+.content-box h5{
+  font-weight: 530;
+  color: var(--blue);
+}
+.content-box .item-content ul{
+  list-style: none;
+  padding: 0;
+  color: var(--text);
+}
+.content-box .item-content ul li{
+      padding: 10px 0 ;
+      font-size: 14px;
+}
+.content-box .item-content ul li:before{
+content: '\f046';
+    font-family: "FontAwesome";
+    color: var(--blue);
+ margin-right: 10px;   
+}
+.content-box .steps{
+  position: absolute;
+  bottom: -15px;left: 36%;
+  background: var(--blue);
+  padding: 10px;
+  color: #FFF;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+/* Four-Our Process-section Start End*/
+/* fancy-Lines-section start*/
+.fancy {
+  line-height: 0.5;
+  text-align: left;
+}
+.fancy span {
+  display: inline-block;
+  position: relative;  
+  font-size: 18px;
+  font-weight: 550;
+}
+.fancy span:before{
+  content: "";
+  position: absolute;
+  height: 6px;
+  border-bottom: 2px solid #FF9915;
+  top: 0;
+  width: 50px;
+}
+.fancy span:before {
+  right: 100%;
+  margin-right: 15px;
+}
+/* fancy-Lines-section end*/
+/*five-section Start*/
+.five-section{
+  margin-top: 80px;
+  padding: 100px 0 ;
+  color: #fff;
+  background:linear-gradient(rgba(25,25,25,0.8),rgba(25,25,25,0.8)), url("../images/about-cta.jpg");
+background-position: top;
+background-attachment: fixed;
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+
+.five-section i{
+ font-size: 4rem;
+ color: #FFD027;
+}
+.five-section .btn{
+color: #0B1B69;
+border-radius: 15px;
+}
+/*five-section End*/
+/*six-section Start*/
+.six-section{
+  padding: 100px 0 ;
+  color: #0B1B69;
+}
+.our-team{
+    text-align: center;
+    padding-left: 30px;
+}
+.pic{
+    position: relative;
+    overflow: hidden;
+}
+.pic img{
+    width: 100%;
+    height: auto;
+}
+.social_media_team{
+    position: absolute;
+    top:100%;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(11, 27, 105, 0.8);
+    transition: all 0.35s ease 0s;
+}
+.team_social{
+    list-style: none;
+    padding: 0;
+    height: 100%;
+    position: relative;
+    top:65%;
+}
+.team_social h5{
+  font-weight: 550;
+font-size: 1.6rem;
+}
+.team_social > li{
+    display: inline-block;
+    margin: 0 5px 5px 0;
+}
+.team_social > li > a{
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 50%;
+    display: block;
+    background: var(--yellow);
+    color:var(--blue);
+    font-size: 18px;
+    transition: 0.4s ease-in-out;
+}
+.team_social > li > a:hover{
+    background: #fff;
+    color:var(--yellow);
+    transition: all 1.3s ease 0s;
+}
+.pic:hover .social_media_team{
+    top:0;
+}
+
+
+/*six-section End*/
+/*Whatsapp-btn*/
+.whatsapp-btn a{
+  position:fixed;
+  width:50px;
+  height:50px;
+  line-height: 54px;
+  bottom:40px;
+  left:40px;
+  background-color:#25d366;
+  color:#FFF;
+  border-radius:50px;
+  text-align:center;
+  font-size:28px;
+  z-index:100;
+  text-decoration: none;
+}
+
+/*Whatsapp-btn*/
+/* footer-section start*/
+footer{
+background:linear-gradient(rgba(3, 11, 60,0.9),rgba(3, 11, 60,0.9)), url("../images/electrical-diagrams-multimeter-for-measurement-in-electrical-installation.jpg");
+background-size: cover;
+ background-position: 0px 30%;
+    background-repeat: no-repeat;
+}
+footer a{
+  text-decoration: none;
+}
+footer img{
+  width: 52%;
+}
+footer p{
+padding-top: 1rem;
+  color: #FFF;
+  font-size: 14px;
+}
+footer .icons {
+     display: inline-block;
+     padding: 0px 20px;
+   }
+   
+  footer .icons i {
+     background: var(--yellow);
+    line-height: 40px;
+     color: var(--blue);
+     font-size: 22px;
+     border-radius: 50%;
+     width: 40px;
+     height: 40px;
+     margin-left: 8px;
+     text-align: center;
+     vertical-align: center;
+     transition: all 0.4s ease;
+   }
+   footer .icons i:hover{
+    background: #FFF;
+    color: var(--yellow);
+   }
+   footer  h5:after{
+  background-color: var(--yellow);
+  content: "";
+  display: block;
+  width: 100px;
+  height: 2px;
+  margin: 20px 0 10px;
+}
+footer .quick-link ul ,footer .useful-links ul{
+  padding: 0;
+}
+footer .quick-link ul li ,footer .useful-links ul li{
+  list-style: none;
+  padding-top: 6px;
+}
+footer .quick-link ul li a ,footer .useful-links ul li a{
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+   footer  h4{
+    font-size: 1.4rem;
+   }
+footer .newsletter p{
+  padding: 0;
+  color: #FFF;
+  font-size: 14px;
+}
+footer .newsletter .btn{
+  color: var(--blue);
+  background: var(--yellow);
+  border: none;
+  border-radius: 0;
+  margin-right: 10px;
+  box-shadow: none;
+}
+/*contact-section*/
+footer h6{
+  font-size: 1.2rem;
+}
+footer span{
+  font-size: 1rem;
+}
+footer .call-btn{
+  margin-top: 30px;
+  padding: 20px;
+  background:var(--blue);
+  text-align: center;
+  color: #FFF;
+  vertical-align: middle; 
+}
+footer .call-btn .icons i {
+     background: var(--yellow);
+     color: var(--blue);
+     font-size: 22px;
+     border-radius: 50%;
+     width: 40px;
+     height: 40px;
+     margin-left: 8px;
+     text-align: center;
+     vertical-align: center;
+   }
+footer .support-btn{
+  margin-top: 30px;
+  padding: 20px;
+  background:var(--yellow);
+  text-align: center;
+  color: var(--blue);
+  vertical-align: middle; 
+}
+footer .support-btn .icons i {
+     background: var(--blue);
+     color: #FFF;
+     font-size: 22px;
+     border-radius: 50%;
+     width: 40px;
+     height: 40px;
+     margin-left: 8px;
+     text-align: center;
+     vertical-align: center;
+   }
+  footer .copyright p{
+   padding: 10px 0;
+   margin: 0;
+}
+  footer .copyright  a{
+    text-decoration: none;
+color: #FFF;
+  }
+  footer .copyright{
+   border-top: 2px solid #eee;
+}
+
+   /*footer-section End*/
+
+   /*media query  */
+ @media(max-width: 1200px){
+  .second-section .images-box1{
+width: 50%;   
+overflow: hidden; 
+  }
+  .second-section .images-box1 .image-2{
+    top: 30%;
+  }
+  .second-section p, h2 , .icon-container .btn{
+    padding-left: 40px;
+  }
+  
+  .seven-section .btn{
+    width: 150px;
+  }
+  .fifth-section .card{
+    padding: 2rem;
+    text-align: center;
+  }
+  footer .icons{
+    padding: 10px;
+  }
+ }
+ @media(max-width: 885px){
+.second-section .images-box1{
+width: 50%;   
+overflow: hidden; 
+  }
+ }
+
+ @media(max-width: 992px){
+ header .icon-box{
+    display: none;
+  }
+  .navbar .navbar-nav .nav-item .nav-link {
+    margin-left: 0.25rem!important;
+  }
+  .nav{
+    display: none;
+  }
+   .btn-dark+.btn{
+  display: initial;
+ }
+  header .icon-box{
+    display: none;
+  }
+#menubar{
+  background: #9B0000;
+  color: #000;
+  margin-bottom: 1rem;
+}
+#menubar .menu-btn-1{
+  display: initial;
+ }
+  .second-section .images-box1{
+  width: 100%;
+  text-align: center;
+}
+.second-section .image-2{
+  top: 10%; left: 0;
+}
+.second-section .counter{
+  display: none;
+}
+  .six-section .col-md-4{
+    margin-top: 10px;
+  }
+      .our-team{
+        margin-bottom: 30px;
+    }
+}
+ @media(max-width: 768px){
+  .second-section .images-box1{
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .second-section .image-1{
+    width: 100%;
+    float: none;
+  }
+  .content-box{
+    min-height: auto;
+    margin-bottom: 30px;
+  }
+  .content-box .steps {
+    left: 45%;
+  }
+}
+  
+
+
+  /* ============ mobile view ============ */
+@media all and (max-width: 991px) {
+  
+  
+  .offcanvas-header{ display:block; }
+
+  .mobile-offcanvas{
+    visibility: hidden;
+    transform:translateX(-100%);
+      border-radius:0; 
+    display:block;
+      position: fixed;
+      top: 0; left:0;
+      height: 100%;
+      z-index: 1200;
+      width:80%;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      transition: visibility .3s ease-in-out, transform .3s ease-in-out;
+  }
+
+  .mobile-offcanvas.show{
+    visibility: visible;
+      transform: translateX(0);
+  }
+  .mobile-offcanvas .container, .mobile-offcanvas .container-fluid{
+    display: block;
+  }
+}
